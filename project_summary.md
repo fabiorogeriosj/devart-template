@@ -1,33 +1,14 @@
-# Project Title
-Insert the name of your project
+# ArtCanvas
 
 ## Authors
-- Insert main author name, surname, github account
-- Insert other author(s) name, surname, github account (one per list element)
+- Fábio Rogério SJ https://github.com/fabiorogeriosj
+- Marcos Frare https://github.com/mpaf00
 
 ## Description
-Insert a description containing about 100 to 150 words, including your motivation and the meaning behind your idea and execution. The Judges will be keen to know how your idea pushes the boundaries of code and technology. 
+The ArtCanvas is a project for people to express their skills and creativity in a virtual canvas painting. Thinking in this way does not seem interesting. 
 
-## Link to Prototype
-NOTE: If your project lives online you can add one or more links here. Make sure you have a stable version of your project running before linking it.
+But not only that, when two programmers who believe in a future where technology will be indispensable in the lives of people resolve to implement this idea, a canvas painting should be more attractive. Thus the ArtCanvas provide voice commands and gesture recognition to paint the screen. 
 
-[Example Link](http://www.google.com "Example Link")
+And the process of creating an art is now an art itself, thinking that the wrath ArtCanvas transmit real-time fabric designer for all who wish to join the artist. 
 
-## Example Code
-NOTE: Wrap your code blocks or any code citation by using ``` like the example below.
-```
-function test() {
-  console.log("Printing a test");
-}
-```
-## Links to External Libraries
- NOTE: You can also use this space to link to external libraries or Github repositories you used on your project.
-
-[Example Link](http://www.google.com "Example Link")
-
-## Images & Videos
-NOTE: For additional images you can either use a relative link to an image on this repo or an absolute link to an externally hosted image.
-
-![Example Image](project_images/cover.jpg?raw=true "Example Image")
-
-https://www.youtube.com/watch?v=30yGOxJJ2PQ
+Will also provide resources to share your drawing by Google+, share the video creation by Youtube and save your drawings in Google Drive.
