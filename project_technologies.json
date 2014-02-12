@@ -1,16 +1,19 @@
 {
     "technologies": {
         "apis": [
-            "insert apis"
+            "Web Speech",
+            "Google Plus"
         ],
         "platforms": [
-            "insert platforms"
+            "LeapMotion"
         ],
         "toolkits": [
-            "insert toolkits"
+            "Node.js"
         ]
     },
     "themes": [
-        "insert themes"
+        "HandControl",
+        "Speak",
+        "Painting"
     ]
 }
