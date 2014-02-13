@@ -2,13 +2,16 @@
     "technologies": {
         "apis": [
             "Web Speech",
-            "Google Plus"
+            "Google Plus",
+            "Youtube",
+            "Google Drive"
         ],
         "platforms": [
             "LeapMotion"
         ],
         "toolkits": [
-            "Node.js"
+            "Node.js",
+            "webkit"
         ]
     },
     "themes": [
