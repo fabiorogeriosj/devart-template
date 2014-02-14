@@ -1,5 +1,6 @@
 //Verificar Google Closure Tools
 VoiceCommands.prototype.OpenTools = function(){
+	console.log('Call -> OpenTools');
 }
 
 VoiceCommands.prototype.CloseTools = function(){
@@ -15,18 +16,23 @@ VoiceCommands.prototype.Pencil = function(){
 	console.log('Call -> Pencil');
 }
 
-voiceControl.VoiceCommandsInstance.commands[0] = new Object();
-voiceControl.VoiceCommandsInstance.commands[0].command = 'OpenTools';
-voiceControl.VoiceCommandsInstance.commands[0].callWords = new Array ("Open Tools");
-voiceControl.VoiceCommandsInstance.commands[1] = new Object();
-voiceControl.VoiceCommandsInstance.commands[1].command = 'CloseTools';
-voiceControl.VoiceCommandsInstance.commands[1].callWords = new Array ("Close Tools");
-voiceControl.VoiceCommandsInstance.commands[2] = new Object();
-voiceControl.VoiceCommandsInstance.commands[2].command = 'OpenColors';
-voiceControl.VoiceCommandsInstance.commands[2].callWords = new Array ("Open Colors");
-voiceControl.VoiceCommandsInstance.commands[3] = new Object();
-voiceControl.VoiceCommandsInstance.commands[3].command = 'CloseColors';
-voiceControl.VoiceCommandsInstance.commands[3].callWords = new Array ("Close Colors");
-voiceControl.VoiceCommandsInstance.commands[4] = new Object();
-voiceControl.VoiceCommandsInstance.commands[4].command = 'Pencil';
-voiceControl.VoiceCommandsInstance.commands[4].callWords = new Array ("Pencil");
+voiceControl.VoiceCommandsInstance().commands.push({
+	command : function (){ voiceControl.VoiceCommandsInstance().OpenTools() },
+	callWords : new Array ("OPEN TOOLS")
+});
+voiceControl.VoiceCommandsInstance().commands.push({
+	command : function (){ voiceControl.VoiceCommandsInstance().CloseTools() },
+	callWords : new Array ("CLOSE TOOLS")
+});
+voiceControl.VoiceCommandsInstance().commands.push({
+	command : function (){ voiceControl.VoiceCommandsInstance().OpenColors() },
+	callWords : new Array ("OPEN COLORS")
+});
+voiceControl.VoiceCommandsInstance().commands.push({
+	command : function (){ voiceControl.VoiceCommandsInstance().CloseColors() },
+	callWords : new Array ("CLOSE COLORS")
+});
+voiceControl.VoiceCommandsInstance().commands.push({
+	command : function (){ voiceControl.VoiceCommandsInstance().Pencil() },
+	callWords : new Array ("PENCIL", "BETHEL", "DIESEL", "CASTLE")
+});

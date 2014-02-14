@@ -3,7 +3,7 @@ var VoiceCommands = function (){
 	this.Process = function (text){
 		for (var i in this.commands){
 			var command = this.commands[i];
-			if (command.callWords.indexOf(text) >= 0){
+			if (command.callWords.indexOf(text.toUpperCase().trim()) >= 0){
 				OnGetCommand(command.command);
 				break;
 			}
@@ -11,10 +11,7 @@ var VoiceCommands = function (){
 	}
 
 	var OnGetCommand = function (command){
-		var func = window[command];
-		if (typeof(func) === "function"){
-			func();
-		}
+		command();
 	}
 
 	this.commands = new Array();

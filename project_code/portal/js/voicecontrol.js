@@ -1,6 +1,7 @@
 var VoiceControl = function (){
 	var recognition = null;
 	var voiceCommands = null;
+	var self = this;
 
 	var RecognitionInstance = function(){
 		if (recognition == null){
@@ -11,7 +12,7 @@ var VoiceControl = function (){
 	}
 
 	this.VoiceCommandsInstance = function(){
-		if (recognition == null){
+		if (voiceCommands == null){
 			voiceCommands = new VoiceCommands();
 		}
 
@@ -22,7 +23,7 @@ var VoiceControl = function (){
 		recognition = new webkitSpeechRecognition();
 		recognition.continuous = true;
 		recognition.interimResults = true;
-		recognition.lang = 'pt-BR'; //en-US
+		recognition.lang = 'en-US'; //en-US pt-BR
 		recognition.onaudioend = function(event) {
 			console.log('Audio end ->', event);
 		}
@@ -41,14 +42,14 @@ var VoiceControl = function (){
 		}
 		recognition.onresult = function(event) {
 			var command = '';
-
+			
 			for (var i = event.resultIndex; i < event.results.length; ++i) {
 				if (event.results[i].isFinal) {
 					command += event.results[i][0].transcript;
+					console.log(command);
+					self.VoiceCommandsInstance().Process(command);
 				}
 			}
-
-			this.VoiceCommandsInstance.Process(command);
 		}
 		recognition.onsoundend = function(event) {
 			console.log('Sound end ->', event);
