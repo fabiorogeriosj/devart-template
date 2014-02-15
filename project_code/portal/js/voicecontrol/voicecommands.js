@@ -29,8 +29,6 @@ VoiceCommands.prototype.ArtCanvas = function(){
 	setTimeout(function (){ location.href = "https://devart.withgoogle.com/#/project/16619961"}, 1000)
 }
 
-
-
 VoiceCommands.prototype.Pencil = function(){
 	document.getElementById('voicecontrol').innerText += "\n Command: Pencil";
 }
@@ -39,6 +37,10 @@ VoiceCommands.prototype.Eraser = function(){
 }
 VoiceCommands.prototype.Javascript = function(){
 	document.getElementById('voicecontrol').innerText += "\n :) JS is the best.";
+}
+
+VoiceCommands.prototype.Avast = function(){
+	speakControl.Speak('Virus database has been updated');
 }
 
 voiceControl.VoiceCommandsInstance().commands.push({
@@ -80,4 +82,8 @@ voiceControl.VoiceCommandsInstance().commands.push({
 voiceControl.VoiceCommandsInstance().commands.push({
 	command : function (){ voiceControl.VoiceCommandsInstance().ArtCanvas() },
 	callWords : new Array ("ART CANVAS", "ARTCANVAS", "ART CANVA", "ARTCANVA")
+});
+voiceControl.VoiceCommandsInstance().commands.push({
+	command : function (){ voiceControl.VoiceCommandsInstance().Avast() },
+	callWords : new Array ("AVAST", "AVIS", "AVE", "EVA")
 });

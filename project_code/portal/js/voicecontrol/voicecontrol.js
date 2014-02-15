@@ -32,6 +32,7 @@ var VoiceControl = function (){
 		}
 		recognition.onend = function(event) {
 			console.log('End ->', event);
+			speakControl.Speak('Microphone Not Allowed');
 			RecognitionInstance().start();
 		}
 		recognition.onerror = function(event) {
