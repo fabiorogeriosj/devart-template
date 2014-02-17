@@ -4,12 +4,22 @@
 	<link rel="stylesheet" type="text/css" href="css/default.css">
 </head>
 <body>
+	<canvas id="canvas"></canvas>
 	<div class="box">
 		<div class="voicecontrol" id="voicecontrol">Click here and say the command</div>
+		<center>
+		<br/><br/><img id="image" src="images/logo1.png"/>
+		</center>
 	</div>
-	<script type="text/javascript" src="js/ivoicecommands.js"></script>
-	<script type="text/javascript" src="js/voicecontrol.js"></script>
+	<script type="text/javascript" src="js/voicecontrol/ivoicecommands.js"></script>
+	<script type="text/javascript" src="js/voicecontrol/voicecontrol.js"></script>
+	<script type="text/javascript" src="js/gesturecontrol/igesturecommands.js"></script>
+	<script type="text/javascript" src="js/gesturecontrol/gesturecontrol.js"></script>
+	<script type="text/javascript" src="js/speakcontrol/speakcontrol.js"></script>
+	<script type="text/javascript" src="js/speakcontrol/mespeak.js"></script>
 	<script type="text/javascript" src="js/init.js"></script>
-	<script type="text/javascript" src="js/voicecommands.js"></script>
+	<script type="text/javascript" src="js/voicecontrol/voicecommands.js"></script>
+	<script type="text/javascript" src="js/gesturecontrol/gesturecommands.js"></script>
+	<script src="//js.leapmotion.com/leap-0.4.1.js"></script>
 </body>
 </html>
