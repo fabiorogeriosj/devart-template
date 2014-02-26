@@ -1,21 +1,49 @@
 .voicecontrol {
 	background-color: #e25959;
 	color: #fff;
-	padding: 40px;
-	padding-bottom: 100px;
-	width: 600px;
+	position: absolute;
+	width: 100px;
+	height: 150px;
 	text-align: center;
 	background-image: url(../images/micro.png);
 	background-repeat: no-repeat;
 	background-position: center bottom;
-	font-size: 38px;
-	margin: 0 auto;
+	font-size: 1px;
+		border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	left: 50%;
+	margin-left: -50px;
+	top: -70px;
+	z-index: 300;
 }
 .box {
 	margin: 0 auto;
 	padding-top: 100px;
 	text-align: center;
+
 }
 #image {
 	display:none;
+}
+#canvas {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.mycolor {
+	background-color: #06246F;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	position: absolute;
+	bottom: -60px;
+	left: -60px;
+	width: 100px;
+	height: 100px;
+	z-index: 200;
+
 }

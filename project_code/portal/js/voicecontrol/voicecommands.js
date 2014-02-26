@@ -9,8 +9,12 @@ VoiceCommands.prototype.CloseTools = function(){
 var temp = 0;
 var colors = ["#06246F","#FF6700","#369100","#006363","#06A600"];
 VoiceCommands.prototype.OpenColors = function(){
-	document.getElementById('voicecontrol').innerText += "\n Command: Change Colors";
-	document.getElementById('voicecontrol').style.background = colors[temp++];
+	//document.getElementById('voicecontrol').innerText += "\n Command: Change Colors";
+	if (temp > colors.length - 1) {
+		temp = 0;
+	};
+	currentColor = colors[++temp];
+	document.getElementById('mycolor').style.background = currentColor;
 }
 
 VoiceCommands.prototype.CloseColors = function(){
@@ -28,7 +32,9 @@ VoiceCommands.prototype.ArtCanvas = function(){
 	document.getElementById('voicecontrol').innerText += "\n Command: Let's go to the project";
 	setTimeout(function (){ location.href = "https://devart.withgoogle.com/#/project/16619961"}, 1000)
 }
-
+VoiceCommands.prototype.EnableGesture = function(){
+	gestureControl.Start();
+}
 VoiceCommands.prototype.Pencil = function(){
 	document.getElementById('voicecontrol').innerText += "\n Command: Pencil";
 }
@@ -37,6 +43,17 @@ VoiceCommands.prototype.Eraser = function(){
 }
 VoiceCommands.prototype.Javascript = function(){
 	document.getElementById('voicecontrol').innerText += "\n :) JS is the best.";
+}
+VoiceCommands.prototype.Clear = function(){
+	gestureControl.GestureCommandInstance().context.setTransform(1, 0, 0, 1, 0, 0);
+	gestureControl.GestureCommandInstance().context.clearRect(0, 0, canvas.width, canvas.height);
+}
+var bc = false;
+VoiceCommands.prototype.ChangeBackground = function(){
+	if(bc=(!bc))
+		document.getElementById('canvas').style.background = '#000';
+	else
+		document.getElementById('canvas').style.background = '#FFF';
 }
 
 VoiceCommands.prototype.Avast = function(){
@@ -86,4 +103,16 @@ voiceControl.VoiceCommandsInstance().commands.push({
 voiceControl.VoiceCommandsInstance().commands.push({
 	command : function (){ voiceControl.VoiceCommandsInstance().Avast() },
 	callWords : new Array ("AVAST", "AVIS", "AVE", "EVA")
+});
+voiceControl.VoiceCommandsInstance().commands.push({
+	command : function (){ voiceControl.VoiceCommandsInstance().EnableGesture() },
+	callWords : new Array ("ENABLE GESTURE", "ENABLE CHESTER", "NEIGHBORS CHESTER", "ENABLE GESTURES")
+});
+voiceControl.VoiceCommandsInstance().commands.push({
+	command : function (){ voiceControl.VoiceCommandsInstance().ChangeBackground() },
+	callWords : new Array ("CHANGE BACKGROUND", "BACKGROUND")
+});
+voiceControl.VoiceCommandsInstance().commands.push({
+	command : function (){ voiceControl.VoiceCommandsInstance().Clear() },
+	callWords : new Array ("CLEAR", "CLEAN")
 });

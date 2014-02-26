@@ -1,3 +1,5 @@
+var currentColor = colors[temp];
+
 GestureCommands.prototype.Circle = function(){
 	var pos = this.LeapToScene(this.gesture.center);
     var radius = this.gesture.radius;
@@ -7,8 +9,8 @@ GestureCommands.prototype.Circle = function(){
         clockwise = true;
     }
 
-    this.context.fillStyle   = "#39AECF";
-    this.context.strokeStyle = "#39AECF";
+    this.context.fillStyle   = currentColor;
+    this.context.strokeStyle = currentColor;
     this.context.lineWidth   = 5;
     this.context.beginPath();
 
@@ -24,7 +26,7 @@ GestureCommands.prototype.Swipe = function(){
 	var startPos = this.LeapToScene(this.gesture.startPosition);
     var pos      = this.LeapToScene(this.gesture.position);
       
-    this.context.strokeStyle = "#FFA040";
+    this.context.strokeStyle = currentColor;
     this.context.lineWidth = 3;
 
     this.context.beginPath();
