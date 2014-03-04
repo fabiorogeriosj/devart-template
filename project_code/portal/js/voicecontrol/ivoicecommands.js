@@ -17,7 +17,7 @@ var VoiceCommands = function (){
 	}
 
 	var OnGetCommand = function (command){
-		command();
+		VoiceCommands.prototype[command].call(voiceControl.VoiceCommandsInstance());
 	}
 
 	this.commands = new Array();
